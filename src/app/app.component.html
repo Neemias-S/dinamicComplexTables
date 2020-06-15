@@ -1,0 +1,37 @@
+<div class="d-flex">
+
+  <div class="pr-0 d-flex justify-content-end">
+
+    <!-- Cabeçalhos Verticais -->
+    <!-- ngIf="table.verticais" -->
+    <div class="d-flex flex-column cell">
+
+      <div>equipe de enfermagem</div>
+
+      <div class="cell" style="height: 3rem;" *ngFor="let cabVert of quadroDeEnfermagem.verticais">{{cabVert}}</div>
+
+    </div>
+
+  </div>
+
+  <div class="table w-75 top-0">
+
+    <!-- Header Horizontal -->
+    <div class="table-row">
+
+      <div class="cell border-right" *ngFor="let cabHor of quadroDeEnfermagem.horizontais">
+        {{cabHor}}
+      </div>
+
+    </div>
+
+    <!-- Linhas -->
+    <div class="table-row table-body" style="height: 3rem;" *ngFor="let row of getNumberOfRows()">
+      <div class="cell" *ngFor="let cell of getCellsOfRow(row)">
+        <input type="text" name="" placeholder="{{cell}}">
+      </div>
+    </div>
+
+  </div>
+
+</div>

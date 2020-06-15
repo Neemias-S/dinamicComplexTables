@@ -1,0 +1,40 @@
+// Table
+.table {
+    display: table;
+    //margin: auto;
+    padding: inherit;
+  }
+  
+  .table-row {
+    align-items: center;
+    display: table-row;
+  
+    @media (max-width: 992px) {
+      font-size: .7rem!important;
+      margin: auto;
+      button{
+        font-size: .7rem!important;
+      }
+    }
+  
+    &:hover{ background-color:#FFFF; }
+  
+    .table-body{
+      &.cell{ padding: 0; }
+      &:hover{ background-color: darken(#f9f9f8, 5%); }
+    }
+  }
+  
+  .cell {
+    border-bottom: 1px solid #ccc;
+    display: table-cell;
+    text-align: left;
+    align-items: center;
+    // padding: .5rem .5rem;
+    // button{ padding: 0 .5rem .5rem 0; }
+  }
+
+  *{
+    font-size: small;
+
+  }
